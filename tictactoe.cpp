@@ -63,22 +63,23 @@ std::ostream& operator<<(std::ostream& os, const board& b) {
 // TODO: Implement this function correctly
 bool check_winner(const board& b, entry e) {
   // rows
-  /*for (size_t i = 0; i < 3; i++){
+  for (size_t i = 0; i < 3; i++){
     for (size_t j = 0; j < 3; j++){
 
-      if (b(i,j) == e){
+      if (b(0,j) == e){
+
         return true;
       }
     }
   }
-*/
-  if (b(0, 0) == e && b(0, 1) == e && b(0, 2) == e) {
+
+  /*if (b(0, 0) == e && b(0, 1) == e && b(0, 2) == e) {
     return true;
   } else if (b(1, 0) == e && b(1, 1) == e && b(1, 2) == e) {
     return true;
   } else if (b(2, 0) == e && b(2, 1) == e && b(2, 2) == e) {
     return true;
-  }
+  }*/
 
   // columns
 
@@ -93,7 +94,8 @@ bool check_winner(const board& b, entry e) {
   }
 */
 
-  else if (b(0, 0) == e && b(1, 0) == e && b(2, 0) == e) {
+  //else
+  if (b(0, 0) == e && b(1, 0) == e && b(2, 0) == e) {
     return true;
   } else if (b(0, 1) == e && b(1, 1) == e && b(2, 1) == e) {
     return true;
